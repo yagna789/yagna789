@@ -1,0 +1,59 @@
+import java.util.Scanner;
+class figure
+{
+    int l,b;
+    public void area()
+    {
+        System.out.println("the area is");
+    }
+}
+class rectangle extends figure
+{
+    int area;
+    @Override
+    public void area()
+    {
+        Scanner d=new Scanner(System.in);
+        System.out.println("enter length");
+        l=d.nextInt();
+        System.out.println("enter breadth");
+        b=d.nextInt();
+        area=l*b;
+        System.out.println("the area is" +area);
+    }
+}
+class triangle extends figure
+{
+    int area;
+    @Override
+    public void area()
+    {
+        Scanner d=new Scanner(System.in);
+        System.out.println("enter height");
+        l=d.nextInt();
+        System.out.println("enter base");
+        b=d.nextInt();
+        area=(l*b)/2;
+        System.out.println("the area is" +area);
+    }
+}
+class override
+{
+    public static void main(String args[])
+    {
+        int c;
+        System.out.print("enter \n1.rectangle \n2.triangle");
+        Scanner d=new Scanner(System.in);
+        c=d.nextInt();
+        if(c==1)
+        {
+            rectangle r1=new rectangle();
+            r1.area();
+        }
+        else
+        {
+            triangle t1=new triangle();
+            t1.area();
+        }
+    }
+}
